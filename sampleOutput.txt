@@ -1,0 +1,493 @@
+CASE 'i'         #####################################
+(base)   ~/CMPT300A4   ls -i                                                                                                                                                                       ∞
+1049851 Makefile  1049839 Part-I.txt  1048602 sampleOutput.txt  1048597 UnixLs  1049518 UnixLs.c
+
+(base)   ~/CMPT300A4   ./UnixLs -i                                                                                                                                                                 ∞
+1049851 Makefile  1049518 UnixLs.c  1048602 sampleOutput.txt  1048597 UnixLs  1049839 Part-I.txt  %  
+
+
+
+CASE 'NO INPUT'  #####################################
+(base)   ~/CMPT300A4   ls                                                                                                                                                                          ∞
+Makefile  Part-I.txt  sampleOutput.txt  UnixLs  UnixLs.c
+(base)   ~/CMPT300A4   ./UnixLs                                                                                                                                                                    ∞
+Makefile  UnixLs.c  sampleOutput.txt  UnixLs  Part-I.txt  % 
+
+
+
+CASE 'l'         #####################################
+(base)   ~/CMPT300A4   ls -l                                                                                                                                                                       ∞
+total 32
+-rw-rw-r-- 1 vagrant vagrant    63 Apr 12 22:22 Makefile
+-rw-rw-r-- 1 vagrant vagrant  1869 Apr 13 00:18 Part-I.txt
+-rw-rw-r-- 1 vagrant vagrant     0 Apr 13 02:01 sampleOutput.txt
+-rwxrwxr-x 1 vagrant vagrant 13240 Apr 13 02:01 UnixLs
+-rw-rw-r-- 1 vagrant vagrant  4274 Apr 13 02:00 UnixLs.c
+
+(base)   ~/CMPT300A4   ./UnixLs -l                                                                                                                                                                 ∞
+-rw-rw-r-- 1 vagrant vagrant    63 Apr 12 2024 22:22 ./Makefile
+-rw-rw-r-- 1 vagrant vagrant  4274 Apr 13 2024 02:00 ./UnixLs.c
+-rw-rw-r-- 1 vagrant vagrant     0 Apr 13 2024 02:01 ./sampleOutput.txt
+-rwxrwxr-x 1 vagrant vagrant 13240 Apr 13 2024 02:01 ./UnixLs
+-rw-rw-r-- 1 vagrant vagrant  1869 Apr 13 2024 00:18 ./Part-I.txt
+
+
+
+CASE 'il' & 'li' #####################################
+(base)   ~/CMPT300A4   ls -il                                                                                                                                                                      ∞
+total 36
+1049851 -rw-rw-r-- 1 vagrant vagrant    63 Apr 12 22:22 Makefile
+1049839 -rw-rw-r-- 1 vagrant vagrant  1869 Apr 13 00:18 Part-I.txt
+1048602 -rw-rw-r-- 1 vagrant vagrant  1677 Apr 13 02:03 sampleOutput.txt
+1048597 -rwxrwxr-x 1 vagrant vagrant 13240 Apr 13 02:01 UnixLs
+1049518 -rw-rw-r-- 1 vagrant vagrant  4274 Apr 13 02:00 UnixLs.c
+
+(base)   ~/CMPT300A4   ./UnixLs -il                                                                                                                                                                ∞
+1049851 -rw-rw-r-- 1 vagrant vagrant    63 Apr 12 2024 22:22 ./Makefile
+1049518 -rw-rw-r-- 1 vagrant vagrant  4274 Apr 13 2024 02:00 ./UnixLs.c
+1048602 -rw-rw-r-- 1 vagrant vagrant  1677 Apr 13 2024 02:03 ./sampleOutput.txt
+1048597 -rwxrwxr-x 1 vagrant vagrant 13240 Apr 13 2024 02:01 ./UnixLs
+1049839 -rw-rw-r-- 1 vagrant vagrant  1869 Apr 13 2024 00:18 ./Part-I.txt
+
+
+
+CASE '-i ~/'    #####################################
+(base)   ~/CMPT300A4   ls -i ~/                                                                                                                                                                    ∞
+ 656452  assignment-2-mastaanRandhawa   527280  build          1049401  CMPT300A2111           524375  Desktop                 655726  miniconda3    524382  Pictures   1048999  Vector-Lab9-Solution
+1048648  assignment-3-mastaanRandhawa   524392  cgdb            524400 'CMPT300A2final?.zip'   524380  Documents               527276  modules.sh    524379  Public      524383  Videos
+ 525015  assignment-4-mastaanRandhawa  1048620  CMPT300A1       524921  CMPT300A2.zip          524377  Downloads               524381  Music         524394  scripts
+ 524869  assignment-5-mastaanRandhawa   524619  CMPT300A1.zip  1049189  CMPT300A3              662559  lab-0-mastaanRandhawa  1049112  OS300A1       524378  Templates
+ 922973  assignment-6-mastaanRandhawa   923658  CMPT300A2      1049722  CMPT300A4              923579  Mastaan-Website         524875  OS300A1.zip   923649  vagrant
+(base)   ~/CMPT300A4   ./UnixLs -i ~/                                                                                                                                                              ∞
+525015 assignment-4-mastaanRandhawa  524442 .bash_history  1049401 CMPT300A2111  656452 assignment-2-mastaanRandhawa  923649 vagrant  524380 Documents  524406 
+.vboxclient-display.pid  524470 .wget-hsts  524381 Music  524306 .zshrc~  524310 .config  524657 .zshrc.save  524429 .vboxclient-seamless.pid  524379 Public  
+527276 modules.sh  1049722 CMPT300A4  1048999 Vector-Lab9-Solution  524308 .ICEauthority  524374 .vboxclient-clipboard.pid  524300 .local  527274 
+.zcompdump-vagrant-5.4.2  1048648 assignment-3-mastaanRandhawa  1048620 CMPT300A1  524383 Videos  524382 Pictures  524619 CMPT300A1.zip  524294 .cache  
+524589 .tgdb  524291 .profile  524394 scripts  524400 CMPT300A2final?.zip  524448 .zsh_history  527280 build  524486 .vscode  530194 .bashrc~  655726 miniconda3  
+922973 assignment-6-mastaanRandhawa  1049189 CMPT300A3  524921 CMPT300A2.zip  530198 .cgdb  524299 .ssh  524869 assignment-5-mastaanRandhawa  524574 .pki  524367 
+.emacs.d  527273 .zcompdump  524377 Downloads  530195 .bashrc  524875 OS300A1.zip  524296 .gnupg  524293 .bash_logout  524392 cgdb  524474 .oh-my-zsh  
+923658 CMPT300A2  1049112 OS300A1  524313 .hushlogin  524378 Templates  923579 Mastaan-Website  662403 .conda  531599 .viminfo  525472 .zshrc  524375 
+Desktop  524427 .vboxclient-draganddrop.pid  530200 .gitconfig  524298 .sudo_as_admin_successful  662559 lab-0-mastaanRandhawa  %       
+
+
+
+CASE '-i -l ..~'  #####################################
+(base)  ✘   ~/CMPT300A4   ls -i -l .. ~                                                                                                                                                           ∞
+..:
+total 208
+ 656452 drwxrwxr-x  8 vagrant vagrant  4096 Oct 11  2023  assignment-2-mastaanRandhawa
+1048648 drwxrwxr-x  9 vagrant vagrant  4096 Nov  1 03:44  assignment-3-mastaanRandhawa
+ 525015 drwxrwxr-x  8 vagrant vagrant  4096 Nov 16 22:51  assignment-4-mastaanRandhawa
+ 524869 drwxrwxr-x 12 vagrant vagrant  4096 Nov 28 21:59  assignment-5-mastaanRandhawa
+ 922973 drwxrwxr-x  6 vagrant vagrant  4096 Dec  3 07:45  assignment-6-mastaanRandhawa
+ 527280 drwxrwxr-x  5 vagrant vagrant  4096 Jul  1  2020  build
+ 524392 drwxr-xr-x 10 vagrant vagrant  4096 Jul  1  2020  cgdb
+1048620 drwxrwxr-x  2 vagrant vagrant  4096 Feb  1 06:57  CMPT300A1
+ 524619 -rw-r--r--  1 vagrant vagrant 21723 Feb  1 04:35  CMPT300A1.zip
+ 923658 drwxrwxr-x  3 vagrant vagrant  4096 Mar 25 20:25  CMPT300A2
+1049401 drwxr-xr-x  3 vagrant vagrant  4096 Feb 27 02:29  CMPT300A2111
+ 524400 -rw-r--r--  1 vagrant vagrant 22828 Feb 28 04:22 'CMPT300A2final?.zip'
+ 524921 -rw-r--r--  1 vagrant vagrant 24108 Feb 28 06:20  CMPT300A2.zip
+1049189 drwxr-xr-x  2 vagrant vagrant  4096 Mar 26 06:53  CMPT300A3
+1049722 drwxrwxr-x  2 vagrant vagrant  4096 Apr 13 02:01  CMPT300A4
+ 524375 drwxr-xr-x  2 vagrant vagrant  4096 May 10  2020  Desktop
+ 524380 drwxr-xr-x  2 vagrant vagrant  4096 Apr 30  2020  Documents
+ 524377 drwxr-xr-x  2 vagrant vagrant  4096 Feb 26 02:46  Downloads
+ 662559 drwxr-xr-x  4 vagrant vagrant  4096 Sep  6  2023  lab-0-mastaanRandhawa
+ 923579 drwxrwxr-x  6 vagrant vagrant  4096 Feb  4 06:47  Mastaan-Website
+ 655726 drwxrwxr-x 16 vagrant vagrant  4096 Feb 24  2021  miniconda3
+ 527276 -rwxrwx---  1 vagrant vagrant  1425 May  1  2020  modules.sh
+ 524381 drwxr-xr-x  2 vagrant vagrant  4096 Apr 30  2020  Music
+1049112 drwxrwxr-x  2 vagrant vagrant  4096 Feb  1 05:34  OS300A1
+ 524875 -rw-r--r--  1 vagrant vagrant 20772 Feb  1 05:33  OS300A1.zip
+ 524382 drwxr-xr-x  2 vagrant vagrant  4096 Feb 26 20:25  Pictures
+ 524379 drwxr-xr-x  2 vagrant vagrant  4096 Apr 30  2020  Public
+ 524394 drwxrwxr-x  2 vagrant vagrant  4096 Feb 24  2021  scripts
+ 524378 drwxr-xr-x  2 vagrant vagrant  4096 Apr 30  2020  Templates
+ 923649 drwxr-xr-x  2 vagrant vagrant  4096 Feb 26 20:22  vagrant
+1048999 drwxr-xr-x  8 vagrant vagrant  4096 Nov 27 20:17  Vector-Lab9-Solution
+ 524383 drwxr-xr-x  2 vagrant vagrant  4096 Apr 30  2020  Videos
+
+/home/vagrant:
+total 208
+ 656452 drwxrwxr-x  8 vagrant vagrant  4096 Oct 11  2023  assignment-2-mastaanRandhawa
+1048648 drwxrwxr-x  9 vagrant vagrant  4096 Nov  1 03:44  assignment-3-mastaanRandhawa
+ 525015 drwxrwxr-x  8 vagrant vagrant  4096 Nov 16 22:51  assignment-4-mastaanRandhawa
+ 524869 drwxrwxr-x 12 vagrant vagrant  4096 Nov 28 21:59  assignment-5-mastaanRandhawa
+ 922973 drwxrwxr-x  6 vagrant vagrant  4096 Dec  3 07:45  assignment-6-mastaanRandhawa
+ 527280 drwxrwxr-x  5 vagrant vagrant  4096 Jul  1  2020  build
+ 524392 drwxr-xr-x 10 vagrant vagrant  4096 Jul  1  2020  cgdb
+1048620 drwxrwxr-x  2 vagrant vagrant  4096 Feb  1 06:57  CMPT300A1
+ 524619 -rw-r--r--  1 vagrant vagrant 21723 Feb  1 04:35  CMPT300A1.zip
+ 923658 drwxrwxr-x  3 vagrant vagrant  4096 Mar 25 20:25  CMPT300A2
+1049401 drwxr-xr-x  3 vagrant vagrant  4096 Feb 27 02:29  CMPT300A2111
+ 524400 -rw-r--r--  1 vagrant vagrant 22828 Feb 28 04:22 'CMPT300A2final?.zip'
+ 524921 -rw-r--r--  1 vagrant vagrant 24108 Feb 28 06:20  CMPT300A2.zip
+1049189 drwxr-xr-x  2 vagrant vagrant  4096 Mar 26 06:53  CMPT300A3
+1049722 drwxrwxr-x  2 vagrant vagrant  4096 Apr 13 02:01  CMPT300A4
+ 524375 drwxr-xr-x  2 vagrant vagrant  4096 May 10  2020  Desktop
+ 524380 drwxr-xr-x  2 vagrant vagrant  4096 Apr 30  2020  Documents
+ 524377 drwxr-xr-x  2 vagrant vagrant  4096 Feb 26 02:46  Downloads
+ 662559 drwxr-xr-x  4 vagrant vagrant  4096 Sep  6  2023  lab-0-mastaanRandhawa
+ 923579 drwxrwxr-x  6 vagrant vagrant  4096 Feb  4 06:47  Mastaan-Website
+ 655726 drwxrwxr-x 16 vagrant vagrant  4096 Feb 24  2021  miniconda3
+ 527276 -rwxrwx---  1 vagrant vagrant  1425 May  1  2020  modules.sh
+ 524381 drwxr-xr-x  2 vagrant vagrant  4096 Apr 30  2020  Music
+1049112 drwxrwxr-x  2 vagrant vagrant  4096 Feb  1 05:34  OS300A1
+ 524875 -rw-r--r--  1 vagrant vagrant 20772 Feb  1 05:33  OS300A1.zip
+ 524382 drwxr-xr-x  2 vagrant vagrant  4096 Feb 26 20:25  Pictures
+ 524379 drwxr-xr-x  2 vagrant vagrant  4096 Apr 30  2020  Public
+ 524394 drwxrwxr-x  2 vagrant vagrant  4096 Feb 24  2021  scripts
+ 524378 drwxr-xr-x  2 vagrant vagrant  4096 Apr 30  2020  Templates
+ 923649 drwxr-xr-x  2 vagrant vagrant  4096 Feb 26 20:22  vagrant
+1048999 drwxr-xr-x  8 vagrant vagrant  4096 Nov 27 20:17  Vector-Lab9-Solution
+ 524383 drwxr-xr-x  2 vagrant vagrant  4096 Apr 30  2020  Videos
+(base)   ~/CMPT300A4   ./UnixLs -i -l .. ~                                                                                                                                                         ∞
+525015 drwxrwxr-x 8 vagrant vagrant  4096 Nov 16 2023 22:51 ../assignment-4-mastaanRandhawa
+524442 -rw------- 1 vagrant vagrant  3776 May  1 2020 04:42 ../.bash_history
+1049401 drwxr-xr-x 3 vagrant vagrant  4096 Feb 27 2024 02:29 ../CMPT300A2111
+656452 drwxrwxr-x 8 vagrant vagrant  4096 Oct 11 2023 03:59 ../assignment-2-mastaanRandhawa
+923649 drwxr-xr-x 2 vagrant vagrant  4096 Feb 26 2024 20:22 ../vagrant
+524380 drwxr-xr-x 2 vagrant vagrant  4096 Apr 30 2020 21:02 ../Documents
+524406 -rw-r----- 1 vagrant vagrant     4 Apr 12 2024 23:44 ../.vboxclient-display.pid
+524470 -rw-r--r-- 1 vagrant vagrant   224 Apr 30 2020 22:31 ../.wget-hsts
+524381 drwxr-xr-x 2 vagrant vagrant  4096 Apr 30 2020 21:02 ../Music
+524306 -rw-r--r-- 1 vagrant vagrant  6368 May 10 2020 22:20 ../.zshrc~
+524310 drwx------16 vagrant vagrant  4096 Mar 21 2021 18:15 ../.config
+524657 -rw-r--r-- 1 vagrant vagrant  7106 Feb 26 2024 20:29 ../.zshrc.save
+524429 -rw-r----- 1 vagrant vagrant     4 Apr 12 2024 23:44 ../.vboxclient-seamless.pid
+524379 drwxr-xr-x 2 vagrant vagrant  4096 Apr 30 2020 21:02 ../Public
+527276 -rwxrwx--- 1 vagrant vagrant  1425 May  1 2020 00:58 ../modules.sh
+1049722 drwxrwxr-x 2 vagrant vagrant  4096 Apr 13 2024 02:01 ../CMPT300A4
+1048999 drwxr-xr-x 8 vagrant vagrant  4096 Nov 27 2023 20:17 ../Vector-Lab9-Solution
+524308 -rw------- 1 vagrant vagrant 27074 Apr 12 2024 23:44 ../.ICEauthority
+524374 -rw-r----- 1 vagrant vagrant     4 Apr 12 2024 23:44 ../.vboxclient-clipboard.pid
+524300 drwx------ 8 vagrant vagrant  4096 Nov 30 2020 04:21 ../.local
+527274 -rw-rw-r-- 1 vagrant vagrant 42601 May  1 2020 00:56 ../.zcompdump-vagrant-5.4.2
+1048648 drwxrwxr-x 9 vagrant vagrant  4096 Nov  1 2023 03:44 ../assignment-3-mastaanRandhawa
+1048620 drwxrwxr-x 2 vagrant vagrant  4096 Feb  1 2024 06:57 ../CMPT300A1
+524383 drwxr-xr-x 2 vagrant vagrant  4096 Apr 30 2020 21:02 ../Videos
+524382 drwxr-xr-x 2 vagrant vagrant  4096 Feb 26 2024 20:25 ../Pictures
+524619 -rw-r--r-- 1 vagrant vagrant 21723 Feb  1 2024 04:35 ../CMPT300A1.zip
+524294 drwx------15 vagrant vagrant  4096 Oct  6 2023 21:08 ../.cache
+524589 drwxr-xr-x 2 vagrant vagrant  4096 May  1 2020 01:34 ../.tgdb
+524291 -rw-r--r-- 1 vagrant vagrant   807 Apr 24 2020 23:59 ../.profile
+524394 drwxrwxr-x 2 vagrant vagrant  4096 Feb 24 2021 18:22 ../scripts
+524400 -rw-r--r-- 1 vagrant vagrant 22828 Feb 28 2024 04:22 ../CMPT300A2final?.zip
+524448 -rw------- 1 vagrant vagrant 99461 Apr 13 2024 02:09 ../.zsh_history
+527280 drwxrwxr-x 5 vagrant vagrant  4096 Jul  1 2020 18:35 ../build
+524486 drwxr-xr-x 3 vagrant vagrant  4096 Apr 30 2020 22:34 ../.vscode
+530194 -rw-r--r-- 1 vagrant vagrant  4286 May  1 2020 01:09 ../.bashrc~
+655726 drwxrwxr-x16 vagrant vagrant  4096 Feb 24 2021 18:22 ../miniconda3
+922973 drwxrwxr-x 6 vagrant vagrant  4096 Dec  3 2023 07:45 ../assignment-6-mastaanRandhawa
+1049189 drwxr-xr-x 2 vagrant vagrant  4096 Mar 26 2024 06:53 ../CMPT300A3
+524921 -rw-r--r-- 1 vagrant vagrant 24108 Feb 28 2024 06:20 ../CMPT300A2.zip
+530198 drwxr-xr-x 3 vagrant vagrant  4096 May  2 2021 21:44 ../.cgdb
+524299 drwx------ 2 vagrant vagrant  4096 Sep  6 2023 03:55 ../.ssh
+524869 drwxrwxr-x12 vagrant vagrant  4096 Nov 28 2023 21:59 ../assignment-5-mastaanRandhawa
+524574 drwx------ 3 vagrant vagrant  4096 Apr 30 2020 22:34 ../.pki
+524367 drwx------ 3 vagrant vagrant  4096 May  1 2020 00:55 ../.emacs.d
+527273 -rw-rw-r-- 1 vagrant vagrant 42583 May  1 2020 00:54 ../.zcompdump
+524377 drwxr-xr-x 2 vagrant vagrant  4096 Feb 26 2024 02:46 ../Downloads
+530195 -rw-r--r-- 1 vagrant vagrant  4774 Feb 24 2021 18:22 ../.bashrc
+524875 -rw-r--r-- 1 vagrant vagrant 20772 Feb  1 2024 05:33 ../OS300A1.zip
+524296 drwx------ 3 vagrant vagrant  4096 Apr 30 2020 21:05 ../.gnupg
+524293 -rw-r--r-- 1 vagrant vagrant   220 Apr 24 2020 23:59 ../.bash_logout
+524392 drwxr-xr-x10 vagrant vagrant  4096 Jul  1 2020 18:39 ../cgdb
+524474 drwxr-xr-x12 vagrant vagrant  4096 May  1 2020 00:53 ../.oh-my-zsh
+923658 drwxrwxr-x 3 vagrant vagrant  4096 Mar 25 2024 20:25 ../CMPT300A2
+1049112 drwxrwxr-x 2 vagrant vagrant  4096 Feb  1 2024 05:34 ../OS300A1
+524313 -rw-r--r-- 1 root    root        0 Apr 30 2020 21:00 ../.hushlogin
+524378 drwxr-xr-x 2 vagrant vagrant  4096 Apr 30 2020 21:02 ../Templates
+923579 drwxrwxr-x 6 vagrant vagrant  4096 Feb  4 2024 06:47 ../Mastaan-Website
+662403 drwxrwxr-x 2 vagrant vagrant  4096 Feb 24 2021 18:22 ../.conda
+531599 -rw------- 1 vagrant vagrant  9464 Sep  6 2023 03:55 ../.viminfo
+525472 -rw-r--r-- 1 vagrant vagrant  7106 Feb 26 2024 20:29 ../.zshrc
+524375 drwxr-xr-x 2 vagrant vagrant  4096 May 10 2020 22:21 ../Desktop
+524427 -rw-r----- 1 vagrant vagrant     4 Apr 12 2024 23:44 ../.vboxclient-draganddrop.pid
+530200 -rw-r--r-- 1 vagrant vagrant    58 Aug 23 2020 01:58 ../.gitconfig
+524298 -rw-r--r-- 1 vagrant vagrant     0 Apr 24 2020 23:59 ../.sudo_as_admin_successful
+662559 drwxr-xr-x 4 vagrant vagrant  4096 Sep  6 2023 23:38 ../lab-0-mastaanRandhawa
+525015 drwxrwxr-x 8 vagrant vagrant  4096 Nov 16 2023 22:51 /home/vagrant/assignment-4-mastaanRandhawa
+524442 -rw------- 1 vagrant vagrant  3776 May  1 2020 04:42 /home/vagrant/.bash_history
+1049401 drwxr-xr-x 3 vagrant vagrant  4096 Feb 27 2024 02:29 /home/vagrant/CMPT300A2111
+656452 drwxrwxr-x 8 vagrant vagrant  4096 Oct 11 2023 03:59 /home/vagrant/assignment-2-mastaanRandhawa
+923649 drwxr-xr-x 2 vagrant vagrant  4096 Feb 26 2024 20:22 /home/vagrant/vagrant
+524380 drwxr-xr-x 2 vagrant vagrant  4096 Apr 30 2020 21:02 /home/vagrant/Documents
+524406 -rw-r----- 1 vagrant vagrant     4 Apr 12 2024 23:44 /home/vagrant/.vboxclient-display.pid
+524470 -rw-r--r-- 1 vagrant vagrant   224 Apr 30 2020 22:31 /home/vagrant/.wget-hsts
+524381 drwxr-xr-x 2 vagrant vagrant  4096 Apr 30 2020 21:02 /home/vagrant/Music
+524306 -rw-r--r-- 1 vagrant vagrant  6368 May 10 2020 22:20 /home/vagrant/.zshrc~
+524310 drwx------16 vagrant vagrant  4096 Mar 21 2021 18:15 /home/vagrant/.config
+524657 -rw-r--r-- 1 vagrant vagrant  7106 Feb 26 2024 20:29 /home/vagrant/.zshrc.save
+524429 -rw-r----- 1 vagrant vagrant     4 Apr 12 2024 23:44 /home/vagrant/.vboxclient-seamless.pid
+524379 drwxr-xr-x 2 vagrant vagrant  4096 Apr 30 2020 21:02 /home/vagrant/Public
+527276 -rwxrwx--- 1 vagrant vagrant  1425 May  1 2020 00:58 /home/vagrant/modules.sh
+1049722 drwxrwxr-x 2 vagrant vagrant  4096 Apr 13 2024 02:01 /home/vagrant/CMPT300A4
+1048999 drwxr-xr-x 8 vagrant vagrant  4096 Nov 27 2023 20:17 /home/vagrant/Vector-Lab9-Solution
+524308 -rw------- 1 vagrant vagrant 27074 Apr 12 2024 23:44 /home/vagrant/.ICEauthority
+524374 -rw-r----- 1 vagrant vagrant     4 Apr 12 2024 23:44 /home/vagrant/.vboxclient-clipboard.pid
+524300 drwx------ 8 vagrant vagrant  4096 Nov 30 2020 04:21 /home/vagrant/.local
+527274 -rw-rw-r-- 1 vagrant vagrant 42601 May  1 2020 00:56 /home/vagrant/.zcompdump-vagrant-5.4.2
+1048648 drwxrwxr-x 9 vagrant vagrant  4096 Nov  1 2023 03:44 /home/vagrant/assignment-3-mastaanRandhawa
+1048620 drwxrwxr-x 2 vagrant vagrant  4096 Feb  1 2024 06:57 /home/vagrant/CMPT300A1
+524383 drwxr-xr-x 2 vagrant vagrant  4096 Apr 30 2020 21:02 /home/vagrant/Videos
+524382 drwxr-xr-x 2 vagrant vagrant  4096 Feb 26 2024 20:25 /home/vagrant/Pictures
+524619 -rw-r--r-- 1 vagrant vagrant 21723 Feb  1 2024 04:35 /home/vagrant/CMPT300A1.zip
+524294 drwx------15 vagrant vagrant  4096 Oct  6 2023 21:08 /home/vagrant/.cache
+524589 drwxr-xr-x 2 vagrant vagrant  4096 May  1 2020 01:34 /home/vagrant/.tgdb
+524291 -rw-r--r-- 1 vagrant vagrant   807 Apr 24 2020 23:59 /home/vagrant/.profile
+524394 drwxrwxr-x 2 vagrant vagrant  4096 Feb 24 2021 18:22 /home/vagrant/scripts
+524400 -rw-r--r-- 1 vagrant vagrant 22828 Feb 28 2024 04:22 /home/vagrant/CMPT300A2final?.zip
+524448 -rw------- 1 vagrant vagrant 99461 Apr 13 2024 02:09 /home/vagrant/.zsh_history
+527280 drwxrwxr-x 5 vagrant vagrant  4096 Jul  1 2020 18:35 /home/vagrant/build
+524486 drwxr-xr-x 3 vagrant vagrant  4096 Apr 30 2020 22:34 /home/vagrant/.vscode
+530194 -rw-r--r-- 1 vagrant vagrant  4286 May  1 2020 01:09 /home/vagrant/.bashrc~
+655726 drwxrwxr-x16 vagrant vagrant  4096 Feb 24 2021 18:22 /home/vagrant/miniconda3
+922973 drwxrwxr-x 6 vagrant vagrant  4096 Dec  3 2023 07:45 /home/vagrant/assignment-6-mastaanRandhawa
+1049189 drwxr-xr-x 2 vagrant vagrant  4096 Mar 26 2024 06:53 /home/vagrant/CMPT300A3
+524921 -rw-r--r-- 1 vagrant vagrant 24108 Feb 28 2024 06:20 /home/vagrant/CMPT300A2.zip
+530198 drwxr-xr-x 3 vagrant vagrant  4096 May  2 2021 21:44 /home/vagrant/.cgdb
+524299 drwx------ 2 vagrant vagrant  4096 Sep  6 2023 03:55 /home/vagrant/.ssh
+524869 drwxrwxr-x12 vagrant vagrant  4096 Nov 28 2023 21:59 /home/vagrant/assignment-5-mastaanRandhawa
+524574 drwx------ 3 vagrant vagrant  4096 Apr 30 2020 22:34 /home/vagrant/.pki
+524367 drwx------ 3 vagrant vagrant  4096 May  1 2020 00:55 /home/vagrant/.emacs.d
+527273 -rw-rw-r-- 1 vagrant vagrant 42583 May  1 2020 00:54 /home/vagrant/.zcompdump
+524377 drwxr-xr-x 2 vagrant vagrant  4096 Feb 26 2024 02:46 /home/vagrant/Downloads
+530195 -rw-r--r-- 1 vagrant vagrant  4774 Feb 24 2021 18:22 /home/vagrant/.bashrc
+524875 -rw-r--r-- 1 vagrant vagrant 20772 Feb  1 2024 05:33 /home/vagrant/OS300A1.zip
+524296 drwx------ 3 vagrant vagrant  4096 Apr 30 2020 21:05 /home/vagrant/.gnupg
+524293 -rw-r--r-- 1 vagrant vagrant   220 Apr 24 2020 23:59 /home/vagrant/.bash_logout
+524392 drwxr-xr-x10 vagrant vagrant  4096 Jul  1 2020 18:39 /home/vagrant/cgdb
+524474 drwxr-xr-x12 vagrant vagrant  4096 May  1 2020 00:53 /home/vagrant/.oh-my-zsh
+923658 drwxrwxr-x 3 vagrant vagrant  4096 Mar 25 2024 20:25 /home/vagrant/CMPT300A2
+1049112 drwxrwxr-x 2 vagrant vagrant  4096 Feb  1 2024 05:34 /home/vagrant/OS300A1
+524313 -rw-r--r-- 1 root    root        0 Apr 30 2020 21:00 /home/vagrant/.hushlogin
+524378 drwxr-xr-x 2 vagrant vagrant  4096 Apr 30 2020 21:02 /home/vagrant/Templates
+923579 drwxrwxr-x 6 vagrant vagrant  4096 Feb  4 2024 06:47 /home/vagrant/Mastaan-Website
+662403 drwxrwxr-x 2 vagrant vagrant  4096 Feb 24 2021 18:22 /home/vagrant/.conda
+531599 -rw------- 1 vagrant vagrant  9464 Sep  6 2023 03:55 /home/vagrant/.viminfo
+525472 -rw-r--r-- 1 vagrant vagrant  7106 Feb 26 2024 20:29 /home/vagrant/.zshrc
+524375 drwxr-xr-x 2 vagrant vagrant  4096 May 10 2020 22:21 /home/vagrant/Desktop
+524427 -rw-r----- 1 vagrant vagrant     4 Apr 12 2024 23:44 /home/vagrant/.vboxclient-draganddrop.pid
+530200 -rw-r--r-- 1 vagrant vagrant    58 Aug 23 2020 01:58 /home/vagrant/.gitconfig
+524298 -rw-r--r-- 1 vagrant vagrant     0 Apr 24 2020 23:59 /home/vagrant/.sudo_as_admin_successful
+662559 drwxr-xr-x 4 vagrant vagrant  4096 Sep  6 2023 23:38 /home/vagrant/lab-0-mastaanRandhawa
+
+
+
+CASE '-li . .. ~'    #####################################
+(base)   ~/CMPT300A4   ls -li . .. ~                                                                                                                                                               ∞
+.:
+total 56
+1049851 -rw-rw-r-- 1 vagrant vagrant    63 Apr 12 22:22 Makefile
+1049839 -rw-rw-r-- 1 vagrant vagrant  1869 Apr 13 00:18 Part-I.txt
+1048602 -rw-rw-r-- 1 vagrant vagrant 21853 Apr 13 02:10 sampleOutput.txt
+1048597 -rwxrwxr-x 1 vagrant vagrant 13240 Apr 13 02:01 UnixLs
+1049518 -rw-rw-r-- 1 vagrant vagrant  4274 Apr 13 02:00 UnixLs.c
+
+..:
+total 208
+ 656452 drwxrwxr-x  8 vagrant vagrant  4096 Oct 11  2023  assignment-2-mastaanRandhawa
+1048648 drwxrwxr-x  9 vagrant vagrant  4096 Nov  1 03:44  assignment-3-mastaanRandhawa
+ 525015 drwxrwxr-x  8 vagrant vagrant  4096 Nov 16 22:51  assignment-4-mastaanRandhawa
+ 524869 drwxrwxr-x 12 vagrant vagrant  4096 Nov 28 21:59  assignment-5-mastaanRandhawa
+ 922973 drwxrwxr-x  6 vagrant vagrant  4096 Dec  3 07:45  assignment-6-mastaanRandhawa
+ 527280 drwxrwxr-x  5 vagrant vagrant  4096 Jul  1  2020  build
+ 524392 drwxr-xr-x 10 vagrant vagrant  4096 Jul  1  2020  cgdb
+1048620 drwxrwxr-x  2 vagrant vagrant  4096 Feb  1 06:57  CMPT300A1
+ 524619 -rw-r--r--  1 vagrant vagrant 21723 Feb  1 04:35  CMPT300A1.zip
+ 923658 drwxrwxr-x  3 vagrant vagrant  4096 Mar 25 20:25  CMPT300A2
+1049401 drwxr-xr-x  3 vagrant vagrant  4096 Feb 27 02:29  CMPT300A2111
+ 524400 -rw-r--r--  1 vagrant vagrant 22828 Feb 28 04:22 'CMPT300A2final?.zip'
+ 524921 -rw-r--r--  1 vagrant vagrant 24108 Feb 28 06:20  CMPT300A2.zip
+1049189 drwxr-xr-x  2 vagrant vagrant  4096 Mar 26 06:53  CMPT300A3
+1049722 drwxrwxr-x  2 vagrant vagrant  4096 Apr 13 02:01  CMPT300A4
+ 524375 drwxr-xr-x  2 vagrant vagrant  4096 May 10  2020  Desktop
+ 524380 drwxr-xr-x  2 vagrant vagrant  4096 Apr 30  2020  Documents
+ 524377 drwxr-xr-x  2 vagrant vagrant  4096 Feb 26 02:46  Downloads
+ 662559 drwxr-xr-x  4 vagrant vagrant  4096 Sep  6  2023  lab-0-mastaanRandhawa
+ 923579 drwxrwxr-x  6 vagrant vagrant  4096 Feb  4 06:47  Mastaan-Website
+ 655726 drwxrwxr-x 16 vagrant vagrant  4096 Feb 24  2021  miniconda3
+ 527276 -rwxrwx---  1 vagrant vagrant  1425 May  1  2020  modules.sh
+ 524381 drwxr-xr-x  2 vagrant vagrant  4096 Apr 30  2020  Music
+1049112 drwxrwxr-x  2 vagrant vagrant  4096 Feb  1 05:34  OS300A1
+ 524875 -rw-r--r--  1 vagrant vagrant 20772 Feb  1 05:33  OS300A1.zip
+ 524382 drwxr-xr-x  2 vagrant vagrant  4096 Feb 26 20:25  Pictures
+ 524379 drwxr-xr-x  2 vagrant vagrant  4096 Apr 30  2020  Public
+ 524394 drwxrwxr-x  2 vagrant vagrant  4096 Feb 24  2021  scripts
+ 524378 drwxr-xr-x  2 vagrant vagrant  4096 Apr 30  2020  Templates
+ 923649 drwxr-xr-x  2 vagrant vagrant  4096 Feb 26 20:22  vagrant
+1048999 drwxr-xr-x  8 vagrant vagrant  4096 Nov 27 20:17  Vector-Lab9-Solution
+ 524383 drwxr-xr-x  2 vagrant vagrant  4096 Apr 30  2020  Videos
+
+/home/vagrant:
+total 208
+ 656452 drwxrwxr-x  8 vagrant vagrant  4096 Oct 11  2023  assignment-2-mastaanRandhawa
+1048648 drwxrwxr-x  9 vagrant vagrant  4096 Nov  1 03:44  assignment-3-mastaanRandhawa
+ 525015 drwxrwxr-x  8 vagrant vagrant  4096 Nov 16 22:51  assignment-4-mastaanRandhawa
+ 524869 drwxrwxr-x 12 vagrant vagrant  4096 Nov 28 21:59  assignment-5-mastaanRandhawa
+ 922973 drwxrwxr-x  6 vagrant vagrant  4096 Dec  3 07:45  assignment-6-mastaanRandhawa
+ 527280 drwxrwxr-x  5 vagrant vagrant  4096 Jul  1  2020  build
+ 524392 drwxr-xr-x 10 vagrant vagrant  4096 Jul  1  2020  cgdb
+1048620 drwxrwxr-x  2 vagrant vagrant  4096 Feb  1 06:57  CMPT300A1
+ 524619 -rw-r--r--  1 vagrant vagrant 21723 Feb  1 04:35  CMPT300A1.zip
+ 923658 drwxrwxr-x  3 vagrant vagrant  4096 Mar 25 20:25  CMPT300A2
+1049401 drwxr-xr-x  3 vagrant vagrant  4096 Feb 27 02:29  CMPT300A2111
+ 524400 -rw-r--r--  1 vagrant vagrant 22828 Feb 28 04:22 'CMPT300A2final?.zip'
+ 524921 -rw-r--r--  1 vagrant vagrant 24108 Feb 28 06:20  CMPT300A2.zip
+1049189 drwxr-xr-x  2 vagrant vagrant  4096 Mar 26 06:53  CMPT300A3
+1049722 drwxrwxr-x  2 vagrant vagrant  4096 Apr 13 02:01  CMPT300A4
+ 524375 drwxr-xr-x  2 vagrant vagrant  4096 May 10  2020  Desktop
+ 524380 drwxr-xr-x  2 vagrant vagrant  4096 Apr 30  2020  Documents
+ 524377 drwxr-xr-x  2 vagrant vagrant  4096 Feb 26 02:46  Downloads
+ 662559 drwxr-xr-x  4 vagrant vagrant  4096 Sep  6  2023  lab-0-mastaanRandhawa
+ 923579 drwxrwxr-x  6 vagrant vagrant  4096 Feb  4 06:47  Mastaan-Website
+ 655726 drwxrwxr-x 16 vagrant vagrant  4096 Feb 24  2021  miniconda3
+ 527276 -rwxrwx---  1 vagrant vagrant  1425 May  1  2020  modules.sh
+ 524381 drwxr-xr-x  2 vagrant vagrant  4096 Apr 30  2020  Music
+1049112 drwxrwxr-x  2 vagrant vagrant  4096 Feb  1 05:34  OS300A1
+ 524875 -rw-r--r--  1 vagrant vagrant 20772 Feb  1 05:33  OS300A1.zip
+ 524382 drwxr-xr-x  2 vagrant vagrant  4096 Feb 26 20:25  Pictures
+ 524379 drwxr-xr-x  2 vagrant vagrant  4096 Apr 30  2020  Public
+ 524394 drwxrwxr-x  2 vagrant vagrant  4096 Feb 24  2021  scripts
+ 524378 drwxr-xr-x  2 vagrant vagrant  4096 Apr 30  2020  Templates
+ 923649 drwxr-xr-x  2 vagrant vagrant  4096 Feb 26 20:22  vagrant
+1048999 drwxr-xr-x  8 vagrant vagrant  4096 Nov 27 20:17  Vector-Lab9-Solution
+ 524383 drwxr-xr-x  2 vagrant vagrant  4096 Apr 30  2020  Videos
+(base)   ~/CMPT300A4   ./UnixLs -li . .. ~                                                                                                                                                         ∞
+1049851 -rw-rw-r-- 1 vagrant vagrant    63 Apr 12 2024 22:22 ./Makefile
+1049518 -rw-rw-r-- 1 vagrant vagrant  4274 Apr 13 2024 02:00 ./UnixLs.c
+1048602 -rw-rw-r-- 1 vagrant vagrant 21853 Apr 13 2024 02:10 ./sampleOutput.txt
+1048597 -rwxrwxr-x 1 vagrant vagrant 13240 Apr 13 2024 02:01 ./UnixLs
+1049839 -rw-rw-r-- 1 vagrant vagrant  1869 Apr 13 2024 00:18 ./Part-I.txt
+525015 drwxrwxr-x 8 vagrant vagrant  4096 Nov 16 2023 22:51 ../assignment-4-mastaanRandhawa
+524442 -rw------- 1 vagrant vagrant  3776 May  1 2020 04:42 ../.bash_history
+1049401 drwxr-xr-x 3 vagrant vagrant  4096 Feb 27 2024 02:29 ../CMPT300A2111
+656452 drwxrwxr-x 8 vagrant vagrant  4096 Oct 11 2023 03:59 ../assignment-2-mastaanRandhawa
+923649 drwxr-xr-x 2 vagrant vagrant  4096 Feb 26 2024 20:22 ../vagrant
+524380 drwxr-xr-x 2 vagrant vagrant  4096 Apr 30 2020 21:02 ../Documents
+524406 -rw-r----- 1 vagrant vagrant     4 Apr 12 2024 23:44 ../.vboxclient-display.pid
+524470 -rw-r--r-- 1 vagrant vagrant   224 Apr 30 2020 22:31 ../.wget-hsts
+524381 drwxr-xr-x 2 vagrant vagrant  4096 Apr 30 2020 21:02 ../Music
+524306 -rw-r--r-- 1 vagrant vagrant  6368 May 10 2020 22:20 ../.zshrc~
+524310 drwx------16 vagrant vagrant  4096 Mar 21 2021 18:15 ../.config
+524657 -rw-r--r-- 1 vagrant vagrant  7106 Feb 26 2024 20:29 ../.zshrc.save
+524429 -rw-r----- 1 vagrant vagrant     4 Apr 12 2024 23:44 ../.vboxclient-seamless.pid
+524379 drwxr-xr-x 2 vagrant vagrant  4096 Apr 30 2020 21:02 ../Public
+527276 -rwxrwx--- 1 vagrant vagrant  1425 May  1 2020 00:58 ../modules.sh
+1049722 drwxrwxr-x 2 vagrant vagrant  4096 Apr 13 2024 02:01 ../CMPT300A4
+1048999 drwxr-xr-x 8 vagrant vagrant  4096 Nov 27 2023 20:17 ../Vector-Lab9-Solution
+524308 -rw------- 1 vagrant vagrant 27074 Apr 12 2024 23:44 ../.ICEauthority
+524374 -rw-r----- 1 vagrant vagrant     4 Apr 12 2024 23:44 ../.vboxclient-clipboard.pid
+524300 drwx------ 8 vagrant vagrant  4096 Nov 30 2020 04:21 ../.local
+527274 -rw-rw-r-- 1 vagrant vagrant 42601 May  1 2020 00:56 ../.zcompdump-vagrant-5.4.2
+1048648 drwxrwxr-x 9 vagrant vagrant  4096 Nov  1 2023 03:44 ../assignment-3-mastaanRandhawa
+1048620 drwxrwxr-x 2 vagrant vagrant  4096 Feb  1 2024 06:57 ../CMPT300A1
+524383 drwxr-xr-x 2 vagrant vagrant  4096 Apr 30 2020 21:02 ../Videos
+524382 drwxr-xr-x 2 vagrant vagrant  4096 Feb 26 2024 20:25 ../Pictures
+524619 -rw-r--r-- 1 vagrant vagrant 21723 Feb  1 2024 04:35 ../CMPT300A1.zip
+524294 drwx------15 vagrant vagrant  4096 Oct  6 2023 21:08 ../.cache
+524589 drwxr-xr-x 2 vagrant vagrant  4096 May  1 2020 01:34 ../.tgdb
+524291 -rw-r--r-- 1 vagrant vagrant   807 Apr 24 2020 23:59 ../.profile
+524394 drwxrwxr-x 2 vagrant vagrant  4096 Feb 24 2021 18:22 ../scripts
+524400 -rw-r--r-- 1 vagrant vagrant 22828 Feb 28 2024 04:22 ../CMPT300A2final?.zip
+524448 -rw------- 1 vagrant vagrant 99655 Apr 13 2024 02:11 ../.zsh_history
+527280 drwxrwxr-x 5 vagrant vagrant  4096 Jul  1 2020 18:35 ../build
+524486 drwxr-xr-x 3 vagrant vagrant  4096 Apr 30 2020 22:34 ../.vscode
+530194 -rw-r--r-- 1 vagrant vagrant  4286 May  1 2020 01:09 ../.bashrc~
+655726 drwxrwxr-x16 vagrant vagrant  4096 Feb 24 2021 18:22 ../miniconda3
+922973 drwxrwxr-x 6 vagrant vagrant  4096 Dec  3 2023 07:45 ../assignment-6-mastaanRandhawa
+1049189 drwxr-xr-x 2 vagrant vagrant  4096 Mar 26 2024 06:53 ../CMPT300A3
+524921 -rw-r--r-- 1 vagrant vagrant 24108 Feb 28 2024 06:20 ../CMPT300A2.zip
+530198 drwxr-xr-x 3 vagrant vagrant  4096 May  2 2021 21:44 ../.cgdb
+524299 drwx------ 2 vagrant vagrant  4096 Sep  6 2023 03:55 ../.ssh
+524869 drwxrwxr-x12 vagrant vagrant  4096 Nov 28 2023 21:59 ../assignment-5-mastaanRandhawa
+524574 drwx------ 3 vagrant vagrant  4096 Apr 30 2020 22:34 ../.pki
+524367 drwx------ 3 vagrant vagrant  4096 May  1 2020 00:55 ../.emacs.d
+527273 -rw-rw-r-- 1 vagrant vagrant 42583 May  1 2020 00:54 ../.zcompdump
+524377 drwxr-xr-x 2 vagrant vagrant  4096 Feb 26 2024 02:46 ../Downloads
+530195 -rw-r--r-- 1 vagrant vagrant  4774 Feb 24 2021 18:22 ../.bashrc
+524875 -rw-r--r-- 1 vagrant vagrant 20772 Feb  1 2024 05:33 ../OS300A1.zip
+524296 drwx------ 3 vagrant vagrant  4096 Apr 30 2020 21:05 ../.gnupg
+524293 -rw-r--r-- 1 vagrant vagrant   220 Apr 24 2020 23:59 ../.bash_logout
+524392 drwxr-xr-x10 vagrant vagrant  4096 Jul  1 2020 18:39 ../cgdb
+524474 drwxr-xr-x12 vagrant vagrant  4096 May  1 2020 00:53 ../.oh-my-zsh
+923658 drwxrwxr-x 3 vagrant vagrant  4096 Mar 25 2024 20:25 ../CMPT300A2
+1049112 drwxrwxr-x 2 vagrant vagrant  4096 Feb  1 2024 05:34 ../OS300A1
+524313 -rw-r--r-- 1 root    root        0 Apr 30 2020 21:00 ../.hushlogin
+524378 drwxr-xr-x 2 vagrant vagrant  4096 Apr 30 2020 21:02 ../Templates
+923579 drwxrwxr-x 6 vagrant vagrant  4096 Feb  4 2024 06:47 ../Mastaan-Website
+662403 drwxrwxr-x 2 vagrant vagrant  4096 Feb 24 2021 18:22 ../.conda
+531599 -rw------- 1 vagrant vagrant  9464 Sep  6 2023 03:55 ../.viminfo
+525472 -rw-r--r-- 1 vagrant vagrant  7106 Feb 26 2024 20:29 ../.zshrc
+524375 drwxr-xr-x 2 vagrant vagrant  4096 May 10 2020 22:21 ../Desktop
+524427 -rw-r----- 1 vagrant vagrant     4 Apr 12 2024 23:44 ../.vboxclient-draganddrop.pid
+530200 -rw-r--r-- 1 vagrant vagrant    58 Aug 23 2020 01:58 ../.gitconfig
+524298 -rw-r--r-- 1 vagrant vagrant     0 Apr 24 2020 23:59 ../.sudo_as_admin_successful
+662559 drwxr-xr-x 4 vagrant vagrant  4096 Sep  6 2023 23:38 ../lab-0-mastaanRandhawa
+525015 drwxrwxr-x 8 vagrant vagrant  4096 Nov 16 2023 22:51 /home/vagrant/assignment-4-mastaanRandhawa
+524442 -rw------- 1 vagrant vagrant  3776 May  1 2020 04:42 /home/vagrant/.bash_history
+1049401 drwxr-xr-x 3 vagrant vagrant  4096 Feb 27 2024 02:29 /home/vagrant/CMPT300A2111
+656452 drwxrwxr-x 8 vagrant vagrant  4096 Oct 11 2023 03:59 /home/vagrant/assignment-2-mastaanRandhawa
+923649 drwxr-xr-x 2 vagrant vagrant  4096 Feb 26 2024 20:22 /home/vagrant/vagrant
+524380 drwxr-xr-x 2 vagrant vagrant  4096 Apr 30 2020 21:02 /home/vagrant/Documents
+524406 -rw-r----- 1 vagrant vagrant     4 Apr 12 2024 23:44 /home/vagrant/.vboxclient-display.pid
+524470 -rw-r--r-- 1 vagrant vagrant   224 Apr 30 2020 22:31 /home/vagrant/.wget-hsts
+524381 drwxr-xr-x 2 vagrant vagrant  4096 Apr 30 2020 21:02 /home/vagrant/Music
+524306 -rw-r--r-- 1 vagrant vagrant  6368 May 10 2020 22:20 /home/vagrant/.zshrc~
+524310 drwx------16 vagrant vagrant  4096 Mar 21 2021 18:15 /home/vagrant/.config
+524657 -rw-r--r-- 1 vagrant vagrant  7106 Feb 26 2024 20:29 /home/vagrant/.zshrc.save
+524429 -rw-r----- 1 vagrant vagrant     4 Apr 12 2024 23:44 /home/vagrant/.vboxclient-seamless.pid
+524379 drwxr-xr-x 2 vagrant vagrant  4096 Apr 30 2020 21:02 /home/vagrant/Public
+527276 -rwxrwx--- 1 vagrant vagrant  1425 May  1 2020 00:58 /home/vagrant/modules.sh
+1049722 drwxrwxr-x 2 vagrant vagrant  4096 Apr 13 2024 02:01 /home/vagrant/CMPT300A4
+1048999 drwxr-xr-x 8 vagrant vagrant  4096 Nov 27 2023 20:17 /home/vagrant/Vector-Lab9-Solution
+524308 -rw------- 1 vagrant vagrant 27074 Apr 12 2024 23:44 /home/vagrant/.ICEauthority
+524374 -rw-r----- 1 vagrant vagrant     4 Apr 12 2024 23:44 /home/vagrant/.vboxclient-clipboard.pid
+524300 drwx------ 8 vagrant vagrant  4096 Nov 30 2020 04:21 /home/vagrant/.local
+527274 -rw-rw-r-- 1 vagrant vagrant 42601 May  1 2020 00:56 /home/vagrant/.zcompdump-vagrant-5.4.2
+1048648 drwxrwxr-x 9 vagrant vagrant  4096 Nov  1 2023 03:44 /home/vagrant/assignment-3-mastaanRandhawa
+1048620 drwxrwxr-x 2 vagrant vagrant  4096 Feb  1 2024 06:57 /home/vagrant/CMPT300A1
+524383 drwxr-xr-x 2 vagrant vagrant  4096 Apr 30 2020 21:02 /home/vagrant/Videos
+524382 drwxr-xr-x 2 vagrant vagrant  4096 Feb 26 2024 20:25 /home/vagrant/Pictures
+524619 -rw-r--r-- 1 vagrant vagrant 21723 Feb  1 2024 04:35 /home/vagrant/CMPT300A1.zip
+524294 drwx------15 vagrant vagrant  4096 Oct  6 2023 21:08 /home/vagrant/.cache
+524589 drwxr-xr-x 2 vagrant vagrant  4096 May  1 2020 01:34 /home/vagrant/.tgdb
+524291 -rw-r--r-- 1 vagrant vagrant   807 Apr 24 2020 23:59 /home/vagrant/.profile
+524394 drwxrwxr-x 2 vagrant vagrant  4096 Feb 24 2021 18:22 /home/vagrant/scripts
+524400 -rw-r--r-- 1 vagrant vagrant 22828 Feb 28 2024 04:22 /home/vagrant/CMPT300A2final?.zip
+524448 -rw------- 1 vagrant vagrant 99655 Apr 13 2024 02:11 /home/vagrant/.zsh_history
+527280 drwxrwxr-x 5 vagrant vagrant  4096 Jul  1 2020 18:35 /home/vagrant/build
+524486 drwxr-xr-x 3 vagrant vagrant  4096 Apr 30 2020 22:34 /home/vagrant/.vscode
+530194 -rw-r--r-- 1 vagrant vagrant  4286 May  1 2020 01:09 /home/vagrant/.bashrc~
+655726 drwxrwxr-x16 vagrant vagrant  4096 Feb 24 2021 18:22 /home/vagrant/miniconda3
+922973 drwxrwxr-x 6 vagrant vagrant  4096 Dec  3 2023 07:45 /home/vagrant/assignment-6-mastaanRandhawa
+1049189 drwxr-xr-x 2 vagrant vagrant  4096 Mar 26 2024 06:53 /home/vagrant/CMPT300A3
+524921 -rw-r--r-- 1 vagrant vagrant 24108 Feb 28 2024 06:20 /home/vagrant/CMPT300A2.zip
+530198 drwxr-xr-x 3 vagrant vagrant  4096 May  2 2021 21:44 /home/vagrant/.cgdb
+524299 drwx------ 2 vagrant vagrant  4096 Sep  6 2023 03:55 /home/vagrant/.ssh
+524869 drwxrwxr-x12 vagrant vagrant  4096 Nov 28 2023 21:59 /home/vagrant/assignment-5-mastaanRandhawa
+524574 drwx------ 3 vagrant vagrant  4096 Apr 30 2020 22:34 /home/vagrant/.pki
+524367 drwx------ 3 vagrant vagrant  4096 May  1 2020 00:55 /home/vagrant/.emacs.d
+527273 -rw-rw-r-- 1 vagrant vagrant 42583 May  1 2020 00:54 /home/vagrant/.zcompdump
+524377 drwxr-xr-x 2 vagrant vagrant  4096 Feb 26 2024 02:46 /home/vagrant/Downloads
+530195 -rw-r--r-- 1 vagrant vagrant  4774 Feb 24 2021 18:22 /home/vagrant/.bashrc
+524875 -rw-r--r-- 1 vagrant vagrant 20772 Feb  1 2024 05:33 /home/vagrant/OS300A1.zip
+524296 drwx------ 3 vagrant vagrant  4096 Apr 30 2020 21:05 /home/vagrant/.gnupg
+524293 -rw-r--r-- 1 vagrant vagrant   220 Apr 24 2020 23:59 /home/vagrant/.bash_logout
+524392 drwxr-xr-x10 vagrant vagrant  4096 Jul  1 2020 18:39 /home/vagrant/cgdb
+524474 drwxr-xr-x12 vagrant vagrant  4096 May  1 2020 00:53 /home/vagrant/.oh-my-zsh
+923658 drwxrwxr-x 3 vagrant vagrant  4096 Mar 25 2024 20:25 /home/vagrant/CMPT300A2
+1049112 drwxrwxr-x 2 vagrant vagrant  4096 Feb  1 2024 05:34 /home/vagrant/OS300A1
+524313 -rw-r--r-- 1 root    root        0 Apr 30 2020 21:00 /home/vagrant/.hushlogin
+524378 drwxr-xr-x 2 vagrant vagrant  4096 Apr 30 2020 21:02 /home/vagrant/Templates
+923579 drwxrwxr-x 6 vagrant vagrant  4096 Feb  4 2024 06:47 /home/vagrant/Mastaan-Website
+662403 drwxrwxr-x 2 vagrant vagrant  4096 Feb 24 2021 18:22 /home/vagrant/.conda
+531599 -rw------- 1 vagrant vagrant  9464 Sep  6 2023 03:55 /home/vagrant/.viminfo
+525472 -rw-r--r-- 1 vagrant vagrant  7106 Feb 26 2024 20:29 /home/vagrant/.zshrc
+524375 drwxr-xr-x 2 vagrant vagrant  4096 May 10 2020 22:21 /home/vagrant/Desktop
+524427 -rw-r----- 1 vagrant vagrant     4 Apr 12 2024 23:44 /home/vagrant/.vboxclient-draganddrop.pid
+530200 -rw-r--r-- 1 vagrant vagrant    58 Aug 23 2020 01:58 /home/vagrant/.gitconfig
+524298 -rw-r--r-- 1 vagrant vagrant     0 Apr 24 2020 23:59 /home/vagrant/.sudo_as_admin_successful
+662559 drwxr-xr-x 4 vagrant vagrant  4096 Sep  6 2023 23:38 /home/vagrant/lab-0-mastaanRandhawa

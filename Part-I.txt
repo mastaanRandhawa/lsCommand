@@ -1,0 +1,52 @@
+Names: Mastaan Randhawa (301551197)  & Avant Tomar (301551910)
+
+Part I: Virtual Memory Questions
+
+Question 1
+
+a. Software Operations:
+  > The process generates a virtual address.
+  The Memory Management Unit (MMU) uses the page number part of the virtual
+  address to look up the page table for the process.
+
+  >The page table entry contains the frame number, which corresponds to the location in
+  physical memory where the page is stored. If the page is not in memory (a page
+  fault), then the operating system will need to load it from disk to a free frame in
+  physical memory and update the page table.
+
+
+b. Hardware Operations:
+  >The hardware (MMU) combines the frame number from the page table with the offset
+  from the virtual address to form the physical address.
+
+  >The data is then accessed in physical memory at the computed physical address.
+  For the given hexadecimal address 11123456, here’s how you would translate it:
+
+    Convert it to binary: 0001 0001 0001 0010 0011 0100 0101 0110
+    The lower 12 bits are the offset, and the remaining upper bits are the page number:
+
+      Page Number (upper 20 bits): 0001 0001 0001 0010 00
+      Offset (lower 12 bits): 110100 01010110
+        
+  >The MMU looks up the page table using the page number to find the
+  corresponding frame number.
+
+  >The physical address will then be the frame number obtained from the page table
+  followed by the offset.
+
+
+Question 2
+
+  >Page fault overhead = 0.7 × 20 ms + 0.3 × 8 ms = 16.4 ms
+
+  >Converted to nanoseconds (since 1 ms = 10 6 ns): 16.4 ms = 16,400,000 ns
+
+  >EAT formula: EAT = (1 - p) × 100 ns + p × 16, 400, 000 ms &lt; 200 ns
+
+  >Solving for p: p ~ 0.0000061
+
+  >This corresponds to a maximum acceptable page fault rate of approximately 0.00061%.
+  Thus, to ensure the EAT does not exceed 200 nanoseconds, the page fault rate must
+  be maintained at or below 0.00061%.
+
+
